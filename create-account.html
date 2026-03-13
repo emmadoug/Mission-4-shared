@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Fixit</title>
+    <link
+      rel="stylesheet"
+      href="emmastyle.css"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <img
+        src="./images/hamburger.png"
+        alt="hamburger button"
+        class="button"
+      />
+      <img
+        src="./images/Logo.png"
+        alt="Fixit Logo"
+        class="button"
+      />
+      <img
+        src="./images/Profile_Button.png"
+        alt="log in button"
+        class="button"
+      />
+    </nav>
+
+    <!-- phone card -->
+    <main class="card">
+      <!-- steps -->
+      <section class="steps">
+        <img
+          src="./images/steps_08.png"
+          alt="step 6 of 10"
+        />
+      </section>
+
+      <!-- main content -->
+       <!-- TODO Fix "margin-top hack" -->
+      <section class="form-area" style="margin-top: 20px;">
+        <div>
+          <h2 class="h2" style="color: white;">Create an account</h2>
+          <p class="p">
+            Access our online services with a FIXIT account for faster
+            transactions and a dashboard to track your requests, applications,
+            rates and permits.
+          </p>
+          <p class="p">
+            Your account also provides access to the libraries platform and
+            enables you to list events.
+          </p>
+          <p class="p">Privacy</p>
+        </div>
+      </section>
+
+      <section class="content">
+        <button class="circle-button">
+          <a href="./create-an-account.html">
+          Create <br />
+          an account
+          </a>
+        </button>
+      </section>
+
+      <!-- back / next button -->
+      <section class="back-next-row">
+        <!-- <button class="pill-button">Back</button> -->
+        <button button id="backBtn" class="pill-button" type="button">Back</button>
+        <button button id="nextBtn" class="pill-button" type="button">Next</button>
+        <!-- <button class="pill-button">Next</button> -->
+      </section>
+
+      <!-- Where Back and Next should go for THIS page -->
+      <body data-back="./template.html" data-next="./template.html">
+      </main>
+
+    <!-- footer -->
+    <!-- <footer class="footer"> -->
+      <!-- <button class="pill-button"><a href="./contact-details.html">Back</a></button> -->
+      <!-- <button class="pill-button">Next</button> -->
+    <!-- </footer> -->
+  </body>
+</html>

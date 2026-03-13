@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixit</title>
+
+    <link rel="stylesheet" href="emmastyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="emmascript.js" defer></script>
+    <script src="emmageolocation.js" defer></script>
+  </head>
+
+  </head>
+
+  <body id="emmaaddphoto" data-back="emmaissue.html" data-next="emmauploadphoto.html">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <img src="./images/hamburger.png" alt="hamburger button" class="button" />
+      <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
+      <img src="./images/Profile_Button.png" alt="log in button" class="button" />
+    </nav>
+
+    <!-- Main phone card -->
+    <main class="card">
+
+      <!-- Progress bar step image -->
+      <section class="steps">
+        <img src="./images/step_02.png" alt="step 2 of 7" />
+      </section>
+
+      <!-- Add Photo intro -->
+      <section class="intro">
+        <h2 class="welcome-title">Add Photo<br><br></h2>
+        <p class="question">
+          Snap a photo of the issue to help us see exactly what's going on.<br><br>
+        </p>
+        <p class="question">
+          A clear picture makes it faster and easier for our team to respond and fix the problem.
+        </p>
+      </section>
+
+      <!-- Three upload photo circle buttons -->
+      <section class="issue-grid issue-grid--actions">
+        <button class="issue-btn" data-action="upload">
+          Upload a Photo
+          <img src="./images/uploadphotogreen_icon.png" alt="Upload icon" class="btn-icon" />
+        </button>
+
+        <button class="issue-btn" data-action="camera">
+          Take Photo
+          <img src="./images/takephoto_icon.png" alt="Camera icon" class="btn-icon" />
+        </button>
+
+        <button class="issue-btn" data-action="skip">
+          Continue<br />without Photo
+        </button>
+      </section>
+
+      <!-- Back / Next buttons -->
+      <section class="cta-row two-buttons">
+        <button id="backBtn" class="btn-next" type="button">Back</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+      </section>
+
+    </main>
+
+    <footer class="footer-empty"></footer>
+  </body>
+</html>

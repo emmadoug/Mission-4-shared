@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixit</title>
+
+    <link rel="stylesheet" href="emmastyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="emmascript.js" defer></script>
+    <script src="emmageolocation.js" defer></script>
+  </head>
+
+  <!-- Where back and next pages go for THIS page -->
+  <body id="emmauploadphoto" data-back="emmaaddphoto.html" data-next="emmawhere.html">
+    <!-- ✅ ALT TEXT: all images below include descriptive alt attributes -->
+    <nav class="navbar">
+      <img src="./images/hamburger.png" alt="hamburger button" class="button" />
+      <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
+      <img src="./images/Profile_Button.png" alt="log in button" class="button" />
+    </nav>
+
+    <!-- phone card -->
+    <main class="card" id="main">
+      <!-- ✅ ALT TEXT: step image described for screen readers -->
+      <section class="steps">
+        <img src="./images/step_02.png" alt="step 2 of 7" />
+      </section>
+
+      <!-- Upload Photo text & instructions -->
+      <section class="intro">
+        <h2 class="welcome-title">Upload Photo<br><br></h2>
+
+        <!-- ✅ STRONG: key instructions highlighted for meaning (plus style)-->
+        <p class="question">
+          For best results, take one <strong>close-up</strong> photo of the issue and one from
+          <strong>further back</strong> that shows <strong>nearby landmarks</strong>.<br><br>
+        </p>
+        <p class="question">
+          This helps us see the problem clearly and know exactly where it is.<br><br>
+        </p>
+        <p class="question">
+          You can upload a maximum of <strong>three photos</strong>.<br><br><br>
+          <strong>Upload your photos below</strong><br><br>
+        </p>
+
+        <!-- ✅ Using JavaScript to create 3 meaningful interactions:
+             Image preview on photo upload (up to 3 images) -->
+
+        <!-- ✅ PROPER FORM LABELLING, ARIA-->
+        <label class="upload-icon-label" for="photo-input">
+          <img src="./images/upload_icon.png" alt="Upload icon" class="upload-icon" />
+        </label>
+
+        <input
+          id="photo-input"
+          type="file"
+          accept="image/*"
+          multiple
+          aria-describedby="photo-error"hidden/>    <!-- ✅ ARIA WILL READ OUT ERROR MESSAGE FROM INSIDE PHOTO UPLOAD-->
+
+        <!-- Where the preview thumbnails and Remove buttons appear -->
+        <div id="photo-preview" class="photo-preview" aria-live="polite"></div>  <!-- ✅ ARIA WILL PAUSE AND THEN ANNOUNCE CHANGES-->
+
+        <!-- Error text (type/size/too many) -->
+        <p id="photo-error" class="photo-error" role="alert" aria-atomic="true"></p>
+      </section>
+
+      <!-- Back / Next buttons -->
+      <section class="cta-row two-buttons">
+        <button id="backBtn" class="btn-next" type="button">Back</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+      </section>
+    </main>
+
+    <footer class="footer-empty"></footer>
+  </body>
+</html>

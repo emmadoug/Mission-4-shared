@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixit</title>
+
+    <link rel="stylesheet" href="emmastyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <script src="emmascript.js" defer></script>
+    <script src="emmageolocation.js" defer></script>
+  </head>
+ 
+  </head>
+
+  <!-- Where next button on THIS page takes you to -->
+  <body id="home_page" data-next="emmaissue.html">
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <img src="./images/hamburger.png" alt="hamburger button" class="button" />
+      <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
+      <img src="./images/Profile_Button.png" alt="log in button" class="button" />
+    </nav>
+
+    <!-- phone card -->
+    <main class="card"><br><br>
+
+      <!-- Home Page Intro -->
+      <section class="intro">
+        
+        <p class="question">For urgent repairs or anything that is not safe to people or property please call us on
+          <br><strong>09 899 9889.</strong><br><br><br>
+        </p>
+        <h2 class="welcome-title">How can we help?<br></h2>        
+      </section>
+
+      <!-- Two circle buttons -->
+      <section class="issue-grid issue-grid--actions" role="group" aria-label="Choose an action">
+        <button class="issue-btn" data-action="report_an_issue">
+          Report<br>an Issue
+        </button>
+
+        <button class="issue-btn" data-action="track_an_issue">
+          Track<br>an Issue
+        </button>
+      </section>
+
+      <!-- Next button -->
+      <section class="cta-row one-buttons">
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+      </section>
+
+    </main>
+
+    <footer class="footer-empty"></footer>
+  </body>
+</html>

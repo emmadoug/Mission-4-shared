@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixit</title>
+
+    <!-- ✅ Site-wide styles -->
+    <link rel="stylesheet" href="emmastyle.css" />
+
+    <!-- ✅ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ✅ Leaflet map library -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+
+    <!-- ✅ Your scripts: core first, then page-specific -->
+    <script src="emmascript.js" defer></script>
+    <script src="emmageolocation.js" defer></script>
+  </head>
+
+  <body id="emmawhere" data-back="emmauploadphoto.html" data-next="emmadescribe.html">
+    <!-- navbar -->
+    <nav class="navbar">
+      <img src="./images/hamburger.png" alt="hamburger button" class="button" />
+      <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
+      <img src="./images/Profile_Button.png" alt="log in button" class="button" />
+    </nav>
+
+    <!-- phone card -->
+    <main class="card">
+      <!-- Progress bar step image -->
+      <section class="steps">
+        <img src="./images/step_03.png" alt="step 3 of 7" />
+      </section>
+
+      <!-- Location of the Issue -->
+      <section class="intro">
+        <h2 class="welcome-title">Where is the issue?<br><br></h2>
+        <p class="question">Please mark the location on the below map</p>
+      </section>
+
+      <!-- ✅ Geolocation feature -->
+      <section class="intro">
+        <p class="question"><strong>Find my current location</strong></p><br>
+        <button id="locateBtn" class="circle-button issue-btn" type="button">Locate Me</button>
+        <p id="geo-error" class="question" style="color:#b00020;"></p>
+      </section>
+
+      <!-- The map container (must have height set in CSS) -->
+      <section class="map-wrap">
+        <div id="map" aria-label="Map showing your current location"></div>
+      </section>
+
+      <!-- Manual option to input address -->
+      <section class="intro">
+        <p class="question"><strong>Or type an address</strong></p>
+        <input
+          id="manual-address"
+          type="text"
+          class="text-input"
+          placeholder="Start typing an address…"
+        />
+      </section>
+
+      <!-- Back / Next buttons -->
+      <section class="cta-row two-buttons">
+        <button id="backBtn" class="btn-next" type="button">Back</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+      </section>
+    </main>
+
+    <footer class="footer-empty"></footer>
+  </body>
+</html>

@@ -1,0 +1,442 @@
+* {
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-family: 'poppins-regular', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- Page frame & card ---------- */
+:root {
+  --fixit-green: #4dc971;
+  --rail: #cfcfcf;
+  --bg: #f3f4f5;
+  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 393px;
+  max-width: 1024px;
+  min-height: 742px;
+  margin: 0 auto 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  padding-bottom: 18px;
+}
+
+/* Responsive card */
+@media (min-width: 768px) {
+  .card {
+    min-height: 900px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    min-height: 1000px;
+  }
+  .content-column {
+    width: 900px;
+  }
+}
+
+/* navbar / contents and button css */
+.navbar {
+  margin: 0 auto;
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--fixit-green);
+  min-width: 393px;
+  max-width: 1024px;
+  height: 110px;
+}
+
+.h2 {
+  color: var(--fixit-green);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.p-left {
+  font-size: 18px;
+  text-align: left;
+}
+
+.circle-button {
+  width: 140px;
+  height: 130px;
+  background-color: #fff;
+  border: 2px solid var(--fixit-green);
+  /* background-color: var(--fixit-green); */
+  flex-shrink: 0;
+  border-radius: 50%;
+  stroke-width: 2px;
+  color: var(--fixit-green);
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 0 20px 0 20px;
+}
+
+.circle-button-cta {
+  width: 140px;
+  height: 130px;
+  border: 2px solid var(--fixit-green);
+  background-color: var(--fixit-green);
+  flex-shrink: 0;
+  border-radius: 50%;
+  stroke-width: 2px;
+  color: #fff;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.circle-button:hover {
+  background-color: #f6fdf8;
+}
+
+.circle-button-cta:hover {
+  cursor: pointer;
+}
+.circle-button.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  min-width: 393px;
+  max-width: 60%;
+  padding: 20px;
+  /* overflow: hidden; */
+  /* word-wrap: break-word; */
+  /* overflow-wrap: break-word; */
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  min-width: 393px;
+  max-width: 60%;
+  padding: 20px;
+  /* overflow: hidden; */
+  /* word-wrap: break-word; */
+  /* overflow-wrap: break-word; */
+}
+
+.pill-button {
+  width: 112px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: bold;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid var(--fixit-green);
+  color: var(--fixit-green);
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.pill-button-big {
+  width: 168px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: bold;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid var(--fixit-green);
+  color: var(--fixit-green);
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.pill-button:hover {
+  background-color: #f6fdf8;
+}
+
+.pill-button-big:hover {
+  background-color: #f6fdf8;
+}
+
+.account-pill-button {
+  display: flex;
+  min-width: 320px;
+  height: 56px;
+  border-radius: 20px;
+  border: 2px solid var(--fixit-green);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--fixit-green);
+  background-color: white;
+  align-items: center;
+  padding-left: 24px;
+  gap: 16px;
+  margin-bottom: 6px;
+}
+
+.account-pill-button:hover {
+  background-color: #f6fdf8;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 393px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  width: 393px;
+  margin-top: 18px;
+}
+
+.back-next-row {
+  display: flex;
+  min-width: 393px;
+  max-width: 1024px;
+  margin-top: auto;
+  justify-content: space-between;
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.form {
+  display: flex;
+  /* padding-left: 10%; */
+  width: 100%;
+  flex-direction: column;
+  /* justify-content: left; */
+  gap: 20px;
+}
+
+.form-area {
+  width: 90%;
+  /* height: 50%; */
+  padding: 40px 30px;
+  justify-content: center;
+  border-radius: 20px;
+  background-color: var(--fixit-green);
+  align-self: center;
+  /* margin-top: 20px; */
+}
+
+.form-area img {
+  display: flex;
+  justify-self: center;
+}
+
+.form-area h2 {
+  display: flex;
+  justify-self: center;
+}
+
+.form-area button {
+  font-size: 18px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  border: 2px solid black;
+  background-color: white;
+  /* border: var(--fixit-green); */
+  border-radius: 20px;
+  padding: 4px 12px 4px 12px;
+  /* color: var(--fixit-green); */
+  box-shadow: var(--shadow);
+}
+
+.form-area button:hover {
+  background-color: #f6fdf8;
+  cursor: pointer;
+}
+
+/* pill-button-small-stretch  */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 18px;
+}
+
+.form-input {
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  margin-top: 8px;
+  padding-left: 8px;
+  font-size: 18px;
+  transition: border-color 0.3s ease;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 18px;
+  /* margin-top: 8px; */
+  display: none;
+}
+
+.error-message.show {
+  color: #ff4444;
+  /* font-size: 18px; */
+  /* margin-top: 8px; */
+  display: block;
+}
+
+.form-input.error {
+  border-color: #ff4444;
+  /* background-color: #fff5f5; */
+  background-color: #ffdbdb;
+}
+
+.form-input.success {
+  border-color: var(--fixit-green);
+  background-color: #f0f9f2;
+}
+
+/* .error-message {
+  font-family: 'poppins-regular', sans-serif;
+  font-weight: 500;
+  color: #ff4444;
+  font-size: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
+} */
+
+/* Emma CSS */
+/* Emma CSS */
+/* Emma CSS */
+/* Emma CSS */
+
+.step-caption {
+  width: 393px;
+  margin: 10px auto 6px;
+  color: #b6b6b6;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  text-align: center;
+  padding: 6px 20px 0;
+}
+
+.welcome-title {
+  color: #31b96c;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 6px 0 2px;
+}
+
+.question {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+/* -------6 circle buttons ---------- */
+.issue-grid {
+  width: 100%;
+  padding: 10px 18px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  justify-items: center;
+}
+
+.issue-btn {
+  width: 140px;
+  height: 130px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  padding: 0 10px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+.issue-btn.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+/* ---------- Next button ---------- */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px; /* ← larger number = lower button */
+}
+
+.btn-next {
+  min-width: 120px;
+  height: 42px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 22px;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+}
+.btn-next:hover {
+  background: #f6fdf8;
+}
+
+/* selected state for Next button- reverse colours */
+.btn-next.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  border-color: var(--fixit-green);
+  box-shadow: var(--shadow);
+}

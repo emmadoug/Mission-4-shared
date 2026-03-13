@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fixit</title>
+
+    <link rel="stylesheet" href="emmastyle.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="emmascript.js" defer></script>
+    <script src="emmageolocation.js" defer></script>
+  </head>
+
+  <!-- Where back and next buttons take you to -->
+  <body id="emmadescribe" data-back="emmawhere.html" data-next="emmabout.html">
+    <!-- navbar -->
+    <nav class="navbar">
+      <img src="./images/hamburger.png" alt="hamburger button" class="button" />
+      <img src="./images/Logo.png" alt="Fixit Logo" class="button" />
+      <img src="./images/Profile_Button.png" alt="log in button" class="button" />
+    </nav>
+
+    <!-- phone card -->
+    <main class="card">
+      <!-- Progress bar step image -->
+      <section class="steps">
+        <img src="./images/step_04.png" alt="step 4 of 7" />
+      </section>
+
+      <!-- Describe the Location -->
+      <section class="intro">
+        <h2 class="welcome-title">Describe the Location</h2>
+      </section>
+
+      <!-- Surface options: accessible fieldset + legend + labelled checkboxes -->
+      <form class="surface-form">
+        <fieldset class="choice-fieldset">
+          <legend class="question">What type of surface is the graffiti on?</legend>
+
+          <div class="choice-grid" id="surface-group">
+            <label class="choice">
+              <input type="checkbox" name="surface" value="sign" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Sign</span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="surface" value="art_mural" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Art or mural</span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="surface" value="road_footpath" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Road or footpath</span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="surface" value="bridge" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Bridge</span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="surface" value="wall" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">Wall</span>
+            </label>
+
+            <label class="choice">
+              <input type="checkbox" name="surface" value="general" />
+              <span class="dot" aria-hidden="true"></span>
+              <span class="choice-text">General graffiti</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <!-- ✅ Using JavaScript to create 3 meaningful interactions:
+             (2) Live character counter for extra details -->
+        <div class="extra-info">
+          <label for="details" class="question">Can you add any further information about the location of the issue?</label>
+          <textarea
+            id="details"
+            rows="4"
+            data-max="200"
+            placeholder="For example... the graffiti is painted across the brick wall facing the motorway right before the entrance to Victoria Park."
+          ></textarea>
+          <p class="question">
+            Characters: <span id="char-count">0</span>/200
+            <span id="char-msg" class="count-msg" aria-live="polite"></span>
+          </p>
+        </div>
+      </form>
+
+      <!-- Back / Next buttons -->
+      <section class="cta-row two-buttons">
+        <button id="backBtn" class="btn-next" type="button">Back</button>
+        <button id="nextBtn" class="btn-next" type="button" disabled>Next</button>
+      </section>
+    </main>
+
+    <footer class="footer-empty"></footer>
+  </body>
+</html>

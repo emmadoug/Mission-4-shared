@@ -1,0 +1,784 @@
+* {
+  box-sizing: border-box;
+  font-optical-sizing: auto;
+  font-family: "poppins-regular", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+   
+
+/* ✅ Center the address input under the map */
+.address-box,
+.extra-info,
+#address-input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
+.address-box input,
+#address-input {
+  margin: 0 auto;
+  max-width: 350px; 
+  width: 90%;       
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4dc971;
+  width: min(100%, var(--container-max));
+  height: 110px;
+}
+
+.h2 {
+  color: #4dc971;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.circle-button {
+  width: 140px;
+  height: 130px;
+  background-color: #fff;
+  border: 2px solid #4dc971;
+  flex-shrink: 0;
+  border-radius: 50%;
+  stroke-width: 2px;
+  color: #4dc971;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.circle-button-cta {
+  width: 140px;
+  height: 130px;
+  border: 2px solid #4dc971;
+  background-color: #4dc971;
+  flex-shrink: 0;
+  border-radius: 50%;
+  stroke-width: 2px;
+  color: #fff;
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.circle-button:hover {
+  background-color: #dfdfdf;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  width: min(100%, var(--container-max));
+  padding: 20px;
+}
+
+.pill-button {
+  width: 112px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #4dc971;
+  color: #4dc971;
+  background: #fff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.pill-button:hover {
+  background-color: #dfdfdf;
+}
+
+.pill-button.selected {
+  background-color: #4dc971;
+  color: #fff;
+  border-color: #4dc971;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, var(--container-max));
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  width: min(100%, var(--container-max));
+  margin-top: 18px;
+}
+
+/* ---------- Page frame & card/white screen ---------- */
+html,
+body {
+  background: var(--bg);
+}
+
+.navbar {
+  margin: 0 auto;
+  border-radius: 12px 12px 0 0;
+  width: min(100%, var(--container-max));
+}
+
+.step-caption {
+  width: min(100%, var(--container-max));
+  margin: 10px auto 6px;
+  color: #b6b6b6;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: min(100%, var(--container-max));
+  min-height: 540px; /* flexible height */
+  margin: 0 auto 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  padding-bottom: 18px;
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  text-align: center;
+  padding: 6px 20px 0;
+}
+.welcome-title {
+  color: #31b96c;
+  font-weight: 800;
+  font-size: 20px;
+  margin: 6px 0 2px;
+}
+.question {
+  margin: 0;
+  font-size: 14px;
+  color: #222;
+}
+
+/* -------6 circle buttons ---------- */
+.issue-grid {
+  width: 100%;
+  padding: 10px 18px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   
+  grid-auto-rows: 130px;
+  gap: 22px;
+  justify-items: center;
+}
+
+
+/* Turn icon white when the button is selected */
+.issue-btn.is-selected img.btn-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Center the icon below the text inside issue buttons */
+.issue-btn {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.issue-btn img.btn-icon {
+  width: 28px;              
+  margin-top: 6px;         
+}
+
+.issue-btn {
+  width: 140px;
+  height: 130px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 999px;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  padding: 0 10px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.12));
+}
+
+.issue-btn.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+/* Next button - if just one button*/
+.cta-row {
+  display: flex;
+  justify-content: center;   
+}
+
+/* Back + Next layout (if there are 2x buttons) */
+.cta-row.two-buttons {
+  justify-content: space-between;
+}
+
+.btn-next {
+  min-width: 120px;
+  height: 42px;
+  background: #fff;
+  color: var(--fixit-green);
+  border: 2px solid var(--fixit-green);
+  border-radius: 22px;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+}
+.btn-next:hover {
+  background: #f6fdf8;
+}
+
+/* selected state for Next button- reverse colours */
+.btn-next.is-selected {
+  background: var(--fixit-green);
+  color: #fff;
+  border-color: var(--fixit-green);
+  box-shadow: var(--shadow);
+}
+
+/* Add Photo Screen */
+.issue-grid--actions {
+  width: 100%;
+  padding: 60px 18px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  justify-items: center;
+}
+
+/* Position the back and next buttons consistently */
+.cta-row {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  margin-top: 160px;
+}
+
+/* When a page has Back + Next */
+.cta-row.two-buttons {
+  justify-content: space-between;
+}
+
+/* When there are 3 buttons, make the last button stretch */
+.issue-grid--actions button:last-child {
+  grid-column: span 2;
+}
+
+.question b,
+.question strong {
+  font-weight: 700;
+}
+.upload strong {
+  font-weight: 700;
+}
+
+/* extra styling */
+.divider-or {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0;
+  color: #777;
+  font-size: 14px;
+}
+.divider-or span {
+  padding: 0 8px;
+}
+.address-img {
+  display: block;
+  width: 90%;
+  max-width: 350px;
+  margin: 12px auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* styling for fieldset, radio groups and text area */
+.choice-fieldset { border: 0; padding: 0; margin: 0; }
+.choice-fieldset > .question { margin: 0 0 8px; }
+
+/* ✅ Center the main question inside fieldset legends */
+.choice-fieldset legend.question {
+  display: block;
+  text-align: center;
+  margin-bottom: 1rem; 
+}
+
+
+/* selected state for circle button: green bg + white text */
+.circle-button.is-selected {
+  background-color: var(--fixit-green);
+  color: #fff;
+  border-color: var(--fixit-green);
+}
+
+/* keep it green even on hover (prevent grey) */
+.circle-button.is-selected:hover {
+  background-color: var(--fixit-green);
+  color: #fff;
+}
+
+/* ===== Describe the Location radio buttons: little circles ===== */
+.surface-form {
+  padding: 0 18px;
+}
+
+/* Center the option groups and keep them the same width as text areas 🌟🌟🌟 */
+.choice-grid{
+  width: min(680px, 90%);
+  margin: 10px auto 18px;          
+  display: grid;
+  grid-template-columns: 1fr 1fr;  
+  column-gap: 24px;
+  row-gap: 14px;
+  justify-items: start;            
+  padding-left: 40px
+}
+
+/* Push only the right-hand column further right */
+.choice-grid label:nth-child(2n) {
+  padding-left: 20px;   
+}
+
+/* About page: stack Yes/No perfectly and lock dot alignment */
+body#emmabout .choice-grid {
+  display: flex;
+  flex-direction: column;     
+  align-items: center;        
+  gap: 4px;                   
+  width: 100%;
+  margin: 10px auto 18px;
+}
+
+/* About page: stack Yes/No perfectly and lock dot alignment 🌟🌟🌟*/
+body#emmabout .choice-grid {
+  display: flex;
+  flex-direction: column;     
+  align-items: center;        
+  gap: 4px;                   
+  width: 100%;
+  margin: 10px auto 18px;
+}
+
+body#emmabout .choice-grid .choice {
+  display: inline-flex;       /* keep dot + text side by side */
+  align-items: center;
+  justify-content: flex-start;
+  min-width: 120px;           
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+body#emmabout .choice-grid .dot {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 2px solid var(--fixit-green, #4dc971);
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+/* ✅ Fill the circle green when selected */
+body#emmabout .choice-grid input[type="radio"]:checked + .dot {
+  background: var(--fixit-green, #4dc971);
+  border-color: var(--fixit-green, #4dc971);
+}
+
+body#emmabout .choice-grid input[type="radio"]:checked + .dot + .choice-text {
+  font-weight: 700;
+  color: #222;
+}
+
+.extra-info .question {
+  padding: 0 20px;
+}
+
+
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* hide default radio but keep accessible */
+.choice input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* circle outline for radio/checkbox buttons – locked size */
+.choice .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;                        
+  border: 2px solid var(--fixit-green, #4dc971);
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  display: inline-block;                      
+  line-height: 0;                             
+  vertical-align: middle;
+  flex: 0 0 20px;                              
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+
+/* green when selected */
+.choice input[type="radio"]:checked + .dot {
+  background: var(--fixit-green, #4dc971);
+  border-color: var(--fixit-green, #4dc971);
+}
+
+/* bold text when selected */
+.choice input[type="radio"]:checked + .dot + .choice-text {
+  font-weight: 700;
+  color: #222;
+}
+
+.extra-info {
+  margin-top: 8px;
+}
+
+/* ===== Consistent text sizing for all pages ===== */
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+
+/* Green section heading: a bit larger */
+.welcome-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--fixit-green, #4dc971);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Smaller text same size */
+.question,
+.choice-text,
+.extra-info p,
+.details-box,
+.details-img,
+p,
+label,
+input,
+textarea,
+button {
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+}
+
+/* ===== center buttons on home_page ===== */
+body#home_page .issue-grid.issue-grid--actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 400px;
+}
+
+/* Responsive page layout: full-height body, centered card, flexible width */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: var(--bg, #f3f4f5);
+}
+
+/* Stack navbar (top) and screen (below), centered horizontally */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Fixed height and width for screen below nav bar
+   updated to responsive width & flexible height */
+.card {
+  width: min(100%, var(--container-max));
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+  overflow: visible;
+}
+
+/* Keep Back/Next row at the bottom */
+.card > .cta-row {
+  margin-top: auto;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card > .cta-row.two-buttons {
+  justify-content: space-between;
+}
+
+
+/* === Allow multiple selections but keep the round dot look 🌟🌟=== */ 
+.choice input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.choice input[type="checkbox"]:checked + .dot {
+  background: var(--fixit-green, #4dc971);
+  border-color: var(--fixit-green, #4dc971);
+}
+
+.choice input[type="checkbox"]:checked + .dot + .choice-text {
+  font-weight: 700;
+  color: #222;
+}
+
+/* =========================================================
+   ✅ Using JavaScript to create 3 meaningful interactions:
+   Image preview – styles for preview box & errors
+   ========================================================= */
+.photo-preview {
+  margin-top: 12px;
+  padding: 10px;
+  border: 2px dashed var(--fixit-green, #4dc971);
+  border-radius: 12px;
+  background: #fafafa;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;   
+  overflow: hidden;
+}
+.photo-preview img {
+  display: block;
+  max-width: 120px;
+  max-height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+.photo-error { margin-top: 8px; color: #b00020; font-weight: 600; }
+.remove-photo {
+  border: 2px solid var(--fixit-green, #4dc971);
+  background: #fff;
+  color: #222;
+  border-radius: 20px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+.remove-photo:hover,
+.remove-photo:focus-visible {
+  background: #f0fff6;
+  outline: 3px solid #0a7f46;
+  outline-offset: 2px;
+}
+
+/* ✅ Using JavaScript to create 3 meaningful interactions:
+   Replace "Choose files" button with clickable icon */
+.upload-icon-label {
+  display: inline-block;
+  cursor: pointer;
+}
+.upload-icon {
+  width: 50px;        
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.upload-icon-label:hover .upload-icon {
+  transform: scale(1.05);
+}
+
+/* ✅ Geolocation map styling */
+.map-wrap {
+  padding: 12px 18px;
+}
+#map {
+  width: 100%;
+  height: 240px;      
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+/* ✅ Center the Locate Me button like other circle buttons */
+#locateBtn.circle-button.issue-btn {
+  display: block;
+  margin: 0 auto 20px;
+}
+
+/* ✅ Bug fix: Leaflet needs a fixed height to render */
+#map { height: 320px; min-height: 320px; border-radius: 12px; overflow: hidden; }
+.leaflet-container img { max-width: none !important; }
+
+/* ✅ Bug fix: make character counter turn red when limit (200+) is exceeded */
+#char-count.count-error {
+  color: #d00;
+  font-weight: 600;
+}
+textarea.over-limit,
+.over-limit {
+  border: 2px solid #d00;
+  outline: 0;
+}
+
+
+
+/* ✅ Center the description/notes box on wide screens */
+.extra-info {
+  /* center the whole section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;        
+  gap: 8px;
+}
+
+.extra-info textarea {
+  /* center and style box it */
+  display: block;
+  width: min(680px, 90%);
+  max-width: 680px;
+  margin: 0 auto;            
+}
+
+/* put the character message below the box */
+.extra-info #char-msg {
+  align-self: center;
+  white-space: nowrap;
+  margin-top: 4px;
+}
+
+/* ✅ Bug fix: make character counter turn red when limit (200+) is exceeded */
+#char-count.count-error { 
+  color: #d00 !important;
+  font-weight: 600;
+}
+
+/* Optional: visually flag the textarea when over limit */
+textarea.over-limit, 
+.over-limit {
+  border: 2px solid #d00 !important;
+  outline: 0;
+}
+
+
+/* ---------- Page frame & card/white screen ---------- */
+:root {
+  --fixit-green: #4dc971;
+  --rail: #cfcfcf;
+  --bg: #f3f4f5;
+  --shadow: 0 6px 10px rgba(0, 0, 0, 0.12);
+}
+
+
+
+
+
+/* ✅ Make layout fully responsive using media queries.
+   Base container width for phones, grows at 600px and 900px */
+:root {
+  --container-max: 393px;      /* small screens */
+}
+
+@media (min-width: 600px) {
+  :root { --container-max: 720px; }   /* tablets and up */
+}
+
+@media (min-width: 900px) {
+  :root { --container-max: 960px; }   /* desktops and up */
+}
+
+
+/* === FIX: prevent white card being clipped + horizontal scroll === */
+
+/* Stop horizontal overflow on all pages */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure the card never touches screen edges */
+.card {
+  width: min(100% - 24px, var(--container-max));
+  padding-bottom: 24px;
+}
+
+/* Extra safety on very small screens */
+@media (max-width: 420px) {
+  .card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+/* ✅ Use basic accessibility features: Focus style: an outline for keyboard users using the TAB key */
+button:focus,
+a:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid #4dc971;
+  outline-offset: 2px;
+}
+
+
+/* ✅ FIX: if the Back/Next row is OUTSIDE the .card on some pages,
+   style it like the bottom of the card so the white doesn't "cut off" */
+
+.card + .cta-row {
+  width: min(100% - 24px, var(--container-max));
+  margin: -12px auto 24px;      /* pulls it up to connect visually */
+  background: #fff;
+  border-radius: 0 0 12px 12px;
+  padding: 12px 20px;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.04);
+}
+
+/* keep your button spacing */
+.card + .cta-row.two-buttons {
+  justify-content: space-between;
+}
+
